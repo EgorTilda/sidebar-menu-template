@@ -1,0 +1,30 @@
+// Vars
+:root {
+    --primary-color: #9356F7;
+    --secondary-color: #FF3D80;
+    --accent-color: #CDFB51;
+    --bg-color: #12131A;
+    --bg-color-hover: #12131A;
+    --grey-color: #4D4D4D; 
+    --surface-color: #161820;
+    --text-color: #FFF;
+    --text-color-alt: #162452;
+    --white-color: #FFF;
+    --black-color: #000;
+
+    --font-main: "Arial", sans-serif;
+    --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --container-width: 1240px;
+    --container-padding-x: 15px;
+    --sidebar-width-full: 14.5rem;
+    --sidebar-width-short: 4rem;
+    --header-height: 3.75rem;
+
+}
+
+$desktop: 1280px;
+$tablet: 1024px;
+$mobile: 768px;
+$desktop-min: 1025px;
+$tablet-min: 769px;

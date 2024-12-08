@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu Template</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <meta name="description" content="">
+</head>
+
+<body>
+    
+    <div class="page">
+        @@include('./chunk/header.html')
+        <div class="page__wrapper">
+            @@include('./chunk/sidebar.html')
+            <main class="page__main main" id="main-elem">
+                <div class="page__inner">
+                   
+                </div>
+                @@include('./chunk/footer.html')
+            </main>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

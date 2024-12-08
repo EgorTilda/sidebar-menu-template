@@ -1,0 +1,112 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+}
+.page {
+    height: 100%;
+    &__header {
+        width: 100%;
+        height: var(--header-height);
+        position: fixed;
+        top: 0;
+        z-index: 900;
+    }
+    &__wrapper {
+        height: 100%;
+        padding-top: 3.75rem;
+        @media screen and (max-width: 430px) {
+            padding-top: 7rem;
+        }
+    }
+    &__sidebar {
+        width: var(--sidebar-width-full);
+        max-width: var(--sidebar-width-full);
+        height: 100%;
+        position: fixed;
+        left: 0;
+        background: var(--black-color);
+    }
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - var(--sidebar-width-full));
+        height: 100%;
+        margin-left: var(--sidebar-width-full);
+        @media screen and (max-width: $tablet) {
+            margin-left: 0;
+        }
+    }
+    &__inner {
+        flex: 1 0 auto;
+    }
+    &__footer {
+        flex: 0 0 auto;
+    }
+}
+.header {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .9);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    &__main {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__control {
+        display: flex;
+        gap: .5rem;
+    }
+    @media screen and (max-width: 430px) {
+        & {
+            height: auto;
+        }
+        &__inner {
+            flex-direction: column;
+            gap: .5rem;
+        }
+    }
+}
+.sidebar {
+    padding: .5rem;
+    transition: all .1s ease-in;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 6px;               /* ширина всей полосы прокрутки */
+    }
+      
+     &::-webkit-scrollbar-track {
+        background: transparent;        /* цвет зоны отслеживания */
+    }
+      
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--surface-color);    /* цвет бегунка */
+        border-radius: 20px;       /* округлось бегунка */
+      }
+}
+.sidebar.hide {
+    width: var(--sidebar-width-short);
+    max-width: var(--sidebar-width-short);
+}
+.main {
+    transition: all .1s ease-in;
+    @media screen and (max-width: $tablet) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.main.move {
+    width: calc(100% - var(--sidebar-width-short));
+    margin-left: var(--sidebar-width-short);
+}
+.footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: var(--black-color);
+}

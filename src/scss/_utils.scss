@@ -1,0 +1,137 @@
+// Container
+.container-fluid {
+    max-width: 1414px;
+    width: 95%;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: $mobile) {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+.container-full {
+    width: 100%;
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--container-padding-x);
+    @media screen and (min-width: 1240px) {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    @media screen and (max-width: 992px) {
+        max-width:  990px;
+    }
+    @media screen and (max-width: 576px) {
+        max-width: 100%;
+    }
+}
+.game-section {
+    padding-bottom: 4rem;
+}
+.mobile-hidden {
+    @media screen and (max-width: $tablet) {
+        display: none;
+    }
+}
+.desktop-hidden {
+    @media screen and (min-width: $desktop-min) {
+        display: none;
+    }
+}
+// Typography
+h1,
+h2,
+h3,
+h4 {
+    line-height: 120%;
+}
+p {
+    line-height: 140%;
+}
+h1 {
+    font-size: 3rem;
+    @media screen and (max-width: 992px) {
+        font-size: 2.5rem;
+    }
+     @media screen and (max-width: 576px) {
+        font-size: 2rem;
+    }
+}
+h2 {
+    font-size: 2.25rem;
+    @media screen and (max-width: 992px) {
+        font-size: 2rem;
+    }
+     @media screen and (max-width: 576px) {
+        font-size: 1.8rem;
+    }
+}
+h3 {
+    font-size: 1.6rem;
+    @media screen and (max-width: 992px) {
+        font-size: 1.5rem;
+    }
+     @media screen and (max-width: 576px) {
+        font-size: 1.2rem;
+    }
+}
+p {
+    font-size: 1rem;
+    @media screen and (max-width: 992px) {
+        font-size: 1rem;
+    }
+     @media screen and (max-width: 576px) {
+        font-size: 1rem;
+    }
+}
+.heading {
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 1rem;
+    &::first-letter {
+        text-transform: uppercase;
+    }
+    &--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &--grey {
+        color: #c4c4c4;
+    }
+    &__text {
+        margin-left: 0.5rem;
+    }
+    &--center {
+        text-align: center;
+    }
+}
+.simple-text {
+    font-size: 1.25rem;
+    color: var(--text);
+    &--center {
+        text-align: center;
+    }
+    &--s {
+        font-size: 1rem;
+    }
+    &--grey {
+        color: #c4c4c4;
+    }
+}
+.text-accent {
+    color: var(--accent) !important;
+    font-weight: 500;
+}
+.text-content {
+    .heading {
+        margin-bottom: var(--mr-16);
+    }
+    &--mb-text {
+        .simple-text {
+            margin-bottom: 1rem;
+        }
+    }
+}
